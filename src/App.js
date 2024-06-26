@@ -12,9 +12,9 @@ import { WATERSHED_BLUE } from './constants';
 
 const N_RINGS = 5;
 
-const rings = Array.from({ length: N_RINGS }, (_, index) => ({
+const rings = Array.from({ length: N_RINGS }, (_, i) => ({
 	position: [0, 0, 0],
-	rotation: [0, (Math.PI / N_RINGS) * index, 0],
+	rotation: [0, (Math.PI / N_RINGS) * (i + 0.5), 0],
 	color: WATERSHED_BLUE,
 }));
 
@@ -57,8 +57,8 @@ const App = () => {
 					<Mask color={WATERSHED_BLUE} />
 				</AlwaysFacing>
 				<SineWave color={WATERSHED_BLUE} />
-				{rings.map((props, index) => (
-					<SpinningRing key={index} {...props} />
+				{rings.map((props, i) => (
+					<SpinningRing key={i} {...props} />
 				))}
 				<Center position={[0, -2.5, 0.5]}>
 					<Text size={0.5} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
