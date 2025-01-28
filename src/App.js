@@ -62,12 +62,12 @@ const App = () => {
 				))}
 				<Center position={[0, -2.5, 0.5]}>
 					<Text size={0.5} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
-						{daysLeft > 0 ? 'See you in' : 'Let’s decarbonize'}
+						{daysLeft > 0 ? 'See you in' : 'Let’s change'}
 					</Text>
 				</Center>
-				<Center position={[0, -3.5, 0.5]}>
+				<Center position={[0, -3.25, 0.5]}>
 					<Text size={0.5} font={`${process.env.PUBLIC_URL}/easy_grotesk.json`}>
-						{daysLeft > 0 ? `${daysLeft} days!` : 'the economy!'}
+						{daysLeft > 0 ? `${daysLeft} days!` : 'climate change!'}
 					</Text>
 				</Center>
 			</Center>
